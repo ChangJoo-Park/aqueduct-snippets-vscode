@@ -1,0 +1,85 @@
+{
+	"Aqueduct Resource Controller": {
+		"prefix": "aq.rc",
+		"body": [
+			"import 'package:aqueduct/aqueduct.dart';",
+			"import 'package:$1/$1.dart';",
+			"",
+			"class ${2}Controller extends ResourceController {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create Aqueduct resource controller class"
+	},
+	"Aqueduct Test Main": {
+		"prefix": "aq.test",
+		"body": [
+			"import 'harness/app.dart';",
+			"",
+			"Future main() async {",
+			"\tfinal harness = Harness()..install();",
+			"",
+			"\ttest(\"Example\", () async {",
+			"\t\tfinal response = await harness.agent.get(\"/path\");",
+			"\t\texpectResponse(response, 200);",
+			"\t});",
+			"}"
+		],
+		"description": "Create Aqueduct test harness"
+	},
+	"Aqueduct Test Method": {
+		"prefix": "aq.test.method",
+		"body": [
+			"test(\"$1\", () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Create Aqueduct test method"
+	},
+	"Aqueduct Operation Method": {
+		"prefix": "aq.op",
+		"body": [
+			"@Operation.${1|get,post,put,delete|}($2)",
+			"Future<Response> ${1:/downcase}$3() async {",
+			"\t$0",
+			"}"
+		],
+		"description": "Create Aqueduct operation method"
+	},
+	"Aqueduct Relate annotation": {
+		"prefix": "aq.relate",
+		"body": [
+			"@Relate(#$1)"
+		],
+		"description": "Create Aqueduct relate annotation"
+	},
+	"Aqueduct Property Selector": {
+		"prefix": "aq.ps",
+		"body": [
+			"(o) => o.$0"
+		],
+		"description": "Create Property Selector"
+	},
+	"Aqueduct Column": {
+		"prefix": "aq.col",
+		"body": [
+			"@Column($1)",
+			"$0"
+		],
+		"description": "Create Aqueduct column"
+	},
+	"Aqueduct Bind": {
+		"prefix": "aq.bind",
+		"body": [
+			"@Bind.${1|header,path,query|}('$2') String $2"
+		],
+		"description": "Create Aqueduct bind"
+	},
+	"Aqueduct Bind Body": {
+		"prefix": "aq.bind.body",
+		"body": [
+			"@Bind.body() $1 $1$0"
+		],
+		"description": "Create Aqueduct bind"
+	}
+}
