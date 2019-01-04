@@ -1,6 +1,7 @@
 {
     "name": "aqueduct-snippets",
     "displayName": "aqueduct-snippets",
+    "publisher": "changjoo-park",
     "description": "",
     "version": "0.0.1",
     "engines": {
@@ -13,7 +14,7 @@
         "snippets": [
             {
                 "language": "",
-                "path": "./snippets/snippets.json"
+                "path": "./snippets/dart.json"
             }
         ]
     }
